@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { withFirebase } from '../Firebase';
+import DeleteUserButton from '../DeleteUser'
 
 class AdminPage extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ const UserList = ({ users }) => (
         <span>
           <strong>Username:</strong> {user.username}
         </span>
+        <DeleteUserButton user={user}/>
       </li>
     ))}
   </ul>
